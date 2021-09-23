@@ -9,7 +9,7 @@ export default function App() {
   const [state, setState] = useState({ good: 0, neutral: 0, bad: 0 });
 
   const onLeaveFeedback = value => {
-    setState(prevState => ({ [value]: prevState[value] + 1 }));
+    setState(prevState => ({ ...prevState, [value]: prevState[value] + 1 }));
   };
 
   const countTotalFeedback = () => {
