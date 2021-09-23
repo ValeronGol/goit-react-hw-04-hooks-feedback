@@ -1,15 +1,17 @@
 import PropTypes from 'prop-types';
-import { Feedback } from './Statistics.styled';
+import { Feedback, FeedbackList } from './Statistics.styled';
 
 const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
   return (
-    <>
-      <Feedback>Good: {good}</Feedback>
-      <Feedback>Neutral: {neutral}</Feedback>
-      <Feedback>Bad: {bad}</Feedback>
-      <Feedback>Total: {total}</Feedback>
-      {bad > 0 && <Feedback>Positive Feedback: {positivePercentage}%</Feedback>}
-    </>
+    <Feedback>
+      <FeedbackList>Good: {good}</FeedbackList>
+      <FeedbackList>Neutral: {neutral}</FeedbackList>
+      <FeedbackList>Bad: {bad}</FeedbackList>
+      <FeedbackList>Total: {total}</FeedbackList>
+      {bad > 0 && (
+        <FeedbackList>Positive Feedback {positivePercentage}%</FeedbackList>
+      )}
+    </Feedback>
   );
 };
 Statistics.propTypes = {

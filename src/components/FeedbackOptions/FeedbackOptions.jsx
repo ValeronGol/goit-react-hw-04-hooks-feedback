@@ -1,13 +1,18 @@
 import PropTypes from 'prop-types';
+import shortid from 'shortid';
 import { BtnFeedback } from 'components/FeedbackOptions/BtnFeedback';
 
-export default function FeedbackOptions({ onLeaveFeedback }) {
+export default function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-    <>
-      <BtnFeedback text="Good" onClick={onLeaveFeedback} />
-      <BtnFeedback text="Neutral" onClick={onLeaveFeedback} />
-      <BtnFeedback text="Bad" onClick={onLeaveFeedback} />
-    </>
+    <div>
+      {options.map(option => (
+        <BtnFeedback
+          key={shortid.generate()}
+          text={option}
+          onClick={() => onLeaveFeedback(option)}
+        />
+      ))}
+    </div>
   );
 }
 
