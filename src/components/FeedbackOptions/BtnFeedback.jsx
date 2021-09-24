@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Button } from './FeedbackOptions.styled';
 
 export function BtnFeedback(props) {
@@ -8,7 +7,3 @@ export function BtnFeedback(props) {
     </Button>
   );
 }
-
-BtnFeedback.propTypes = {
-  props: PropTypes.string.isRequired,
-};

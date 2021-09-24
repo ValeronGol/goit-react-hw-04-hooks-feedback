@@ -9,7 +9,7 @@ const Statistics = ({ good, bad, neutral, total, positivePercentage }) => {
       <FeedbackList>Bad: {bad}</FeedbackList>
       <FeedbackList>Total: {total}</FeedbackList>
       {bad > 0 && (
-        <FeedbackList>Positive Feedback {positivePercentage}%</FeedbackList>
+        <FeedbackList>Positive Feedback: {positivePercentage}%</FeedbackList>
       )}
     </Feedback>
   );
