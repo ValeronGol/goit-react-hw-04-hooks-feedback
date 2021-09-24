@@ -7,3 +7,8 @@ export function BtnFeedback(props) {
     </Button>
   );
 }
+
+BtnFeedback.propTypes = {
+  props: PropTypes.string.isRequired,
+  
+};
